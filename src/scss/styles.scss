@@ -1,2 +1,145 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap";
+
+.velikost {
+    height: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.fix {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.filter-item {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    margin-right: 8px;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #0000009e;
+    color: #000000;
+    width: 110px;
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url(/wp-content/themes/autasuper/static/img/svg/arrow-down-triangle.svg);
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: 13px;
+    padding: 8px 7px 10px 18px;
+    cursor: pointer;
+}
+@media (max-width: 1023px) {
+.filter-item {
+    margin-right: 0.5%;
+    border-bottom: 1px solid #ffffff9e;
+    width: 19.7%;
+    padding: 6px 0.2% 9px 4.3%;
+}
+}
+
+.filter-item option {
+    color: white !important;
+    background: #201f1f !important;
+    cursor: pointer;
+}
+
+@media (max-width: 1199px) {
+    .b-filter__item {
+        max-width: 400px;
+    }
+}
+
+.filter-item.filter-item-bigger {
+    width: 114px;
+}
+
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-button:hover {
+    background-color: #ffffff;
+}
+
+.cart-count {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.cart-container:hover .cart-dropdown {
+    display: block;
+}
+
+.cart-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-items li button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkout-button:hover {
+    background-color: darkgreen;
+}
