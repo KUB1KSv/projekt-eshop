@@ -10,12 +10,12 @@
 
 <body>
 	<div class="container">
-		<div class="d-sm-grid d-lg-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+		<div class="d-grid d-lg-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 			<img src="./images/logo.png" alt=""
 				class="velikost d-flex align-items-center my-2 my-lg-0 me-lg-auto justify-content-center">
 			</img>
 			<div class="d-flex justify-content-center">
-				<form class="d-flex align-items-center col-12 col-lg-auto mb-3 mb-lg-0 mb-sm-0 me-lg-3" role="search">
+				<form class="d-flex align-items-center col-12 col-lg-auto mb-lg-0 mb-sm-0 me-lg-3" role="search">
 					<input type="search" class="form-control" placeholder="Search..." aria-label="Search">
 				</form>
 				<div class="cart-container">
@@ -41,7 +41,8 @@
 			</div>
 		</div>
 	</div>
-		<div class="d-flex">
+	<div class="custom-container mb-2">
+		<div class="d-none d-lg-flex">
 			<div class="filter-sort-container">
 				<section class="filter-section">
 					<h2>Filtrace</h2>
@@ -93,10 +94,10 @@
 					</form>
 				</section>
 			</div>
-			<div>
-				<div class="container mb-2">
+			<div class="pravo">
+				<div class="d-flex justify-content-between">
 					<div class="row g-2">
-						<div class="col-md-2">
+						<div class="col-md-3 col-lg-4">
 
 							<select name="brand" class="form-select">
 								<option>Značka</option>
@@ -116,14 +117,14 @@
 								<option>Volkswagen</option>
 							</select>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-3 col-lg-4">
 							<select name="fuel" class="form-select">
 								<option>Palivo</option>
 								<option>Benzin</option>
 								<option>Nafta</option>
 							</select>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-3 col-lg-4">
 
 							<select name="body" class="form-select">
 								<option>Karosérie</option>
@@ -138,7 +139,7 @@
 								<option>VAN</option>
 							</select>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-3 col-lg-4">
 
 							<select name="brand" class="form-select">
 								<option>Od nejnovějších</option>
@@ -149,7 +150,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="container ms-4">
+				<div class="container">
 					<div class="row">
 						<div class="col-md-6 col-lg-4">
 							<div class="card border-black mb-3">
@@ -224,7 +225,7 @@
 								<img src="./images/lambo.jpg" class="card-img-top velikost" alt="...">
 								<div class="card-body">
 									<div class="d-flex justify-content-between">
-										<a href="" class="card-title"><b>Lamborghini Huracan EVO</b></a>
+										<a href="" class="card-title"><b>Lamborghini Huracan</b></a>
 										<p><b>7 699 900 Kč</b></p>
 									</div>
 									<div class="d-flex justify-content-between">
@@ -360,7 +361,7 @@
 								<img src="./images/merc.jpg" class="card-img-top velikost" alt="...">
 								<div class="card-body">
 									<div class="d-flex justify-content-between">
-										<a href="" class="card-title"><b>Mercedes-Benz C63 AMG Black Series</b></a>
+										<a href="" class="card-title"><b>Mercedes-Benz C63</b></a>
 										<p><b>4 159 437 Kč</b></p>
 									</div>
 									<div class="d-flex justify-content-between">
@@ -394,7 +395,7 @@
 								<img src="./images/dodge.webp" class="card-img-top velikost" alt="...">
 								<div class="card-body">
 									<div class="d-flex justify-content-between">
-										<a href="" class="card-title"><b> Dodge Charger Daytona</b></a>
+										<a href="" class="card-title"><b> Dodge Charger</b></a>
 										<p><b>9 985 874 Kč</b></p>
 									</div>
 									<div class="d-flex justify-content-between">
@@ -410,6 +411,385 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	</div>
+	<div class="d-grid d-lg-none">
+		<div class="d-grid justify-content-center mb-5">
+			<a class="btn btn-danger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+				aria-controls="offcanvasExample">
+				upravit filter
+			</a>
+
+			<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+				aria-labelledby="offcanvasExampleLabel">
+				<section class="container mt-5">
+					<form id="filter-form">
+
+						<!-- Radio buttony -->
+						<div class="filter-group">
+							<h3>Stav</h3>
+							<label>
+								<input type="radio" name="condition" value="new"> Nové
+							</label>
+							<label>
+								<input type="radio" name="condition" value="used"> Použité
+							</label>
+						</div>
+
+						<!-- Textové pole -->
+						<div class="filter-group">
+							<h3>Cenové rozpětí</h3>
+							<label>
+								Od: <input type="text" name="price_min" placeholder="Minimální cena">
+							</label>
+							<label>
+								Do: <input type="text" name="price_max" placeholder="Maximální cena">
+							</label>
+						</div>
+
+						<!-- Další checkbox -->
+						<div class="filter-group">
+							<h3>Barva</h3>
+							<label>
+								<input type="checkbox" name="color" value="red"> Červená
+							</label>
+							<label>
+								<input type="checkbox" name="color" value="blue"> Modrá
+							</label>
+							<label>
+								<input type="checkbox" name="color" value="black"> Černá
+							</label>
+							<label>
+								<input type="checkbox" name="color" value="black"> Bílá
+							</label>
+							<label>
+								<input type="checkbox" name="color" value="black"> Stříbrná
+							</label>
+						</div>
+						<div class="mb-2">
+							<div class="row">
+								<div class="col-lg-2">
+			
+									<select name="brand" class="form-select mb-2">
+										<option>Značka</option>
+										<option>BMW</option>
+										<option>Dodge</option>
+										<option>Fiat</option>
+										<option>Ford</option>
+										<option>Lamborghini</option>
+										<option>Mercedes-Benz</option>
+										<option>Nissan</option>
+										<option>Peugeot</option>
+										<option>Porsche</option>
+										<option>Rolls-Royce</option>
+										<option>Škoda</option>
+										<option>Subaru</option>
+										<option>Toyota</option>
+										<option>Volkswagen</option>
+									</select>
+								</div>
+								<div class="col-lg-2">
+									<select name="fuel" class="form-select mb-2">
+										<option>Palivo</option>
+										<option>Benzin</option>
+										<option>Nafta</option>
+									</select>
+								</div>
+								<div class="col-lg-2">
+			
+									<select name="body" class="form-select mb-2">
+										<option>Karosérie</option>
+										<option>Hatchback</option>
+										<option>Kabriolet</option>
+										<option>Kombi</option>
+										<option>Kupé</option>
+										<option>Liftback</option>
+										<option>Limuzína</option>
+										<option>Sedan</option>
+										<option>SUV</option>
+										<option>VAN</option>
+									</select>
+								</div>
+								<div class="col-lg-2">
+			
+									<select name="brand" class="form-select mb-2">
+										<option>Od nejnovějších</option>
+										<option>Od nejdražších</option>
+										<option>Od nejlevnějších</option>
+										<option>Od nejvýkonnějších</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<button type="submit" class="btn btn-danger">Filtrovat</button>
+					</form>
+				</section>
+			</div>
+		</div>
+
+		<div>
+			<div class="container ms-4">
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/octavia.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Škoda Octavia 1</b></a>
+									<p><b>60 000 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										2003
+									</p>
+									<p>250 000 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/multipla.webp" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Widebody Fiat Multipla</b></a>
+									<p><b>400 000 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										2004
+									</p>
+									<p>250 000 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/c6.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Chevrolet Cotvette C6</b></a>
+									<p><b>490 000 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										2008
+									</p>
+									<p>129 000 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/e38.avif" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="bmw.html" class="card-title"><b>Bmw E38 ALPINA B12</b></a>
+									<p><b>1 589 112 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										1998
+									</p>
+									<p>140 108 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/lambo.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Lamborghini Huracan</b></a>
+									<p><b>7 699 900 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										2021
+									</p>
+									<p>20 980 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/golf.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Volkswagen Golf 4</b></a>
+									<p><b>45 000 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										2001
+									</p>
+									<p>225 282 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/chaser.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Toyota Chaser</b></a>
+									<p><b>819 780 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										1996
+									</p>
+									<p>225 282 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/impreza.jpeg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Subaru Impreza</b></a>
+									<p><b>2 867 160 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										1999
+									</p>
+									<p>58 000 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/rolls.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Rolls-Royce Phantom</b></a>
+									<p><b>3 250 000 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										2024
+									</p>
+									<p>52 200 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/porsche.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b> Porsche 911</b></a>
+									<p><b>5 549 280 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										1976
+									</p>
+									<p>1 698 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/taxi.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Peugeot 406 TAXI 1</b></a>
+									<p><b>126 000 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										1998
+									</p>
+									<p> 270 000 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/silvia.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Nissan Silvia S15 Spec-R</b></a>
+									<p><b>699 500 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										1999
+									</p>
+									<p>105 000 Km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/merc.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b>Mercedes-Benz C63</b></a>
+									<p><b>4 159 437 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										2012
+									</p>
+									<p>32 000 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card border-black mb-3">
+							<img src="./images/mustang.jpg" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b> Ford Mustang GTD</b></a>
+									<p><b>7 567 200 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										2024
+									</p>
+									<p>0 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4 mb-5">
+						<div class="card border-black mb-3">
+							<img src="./images/dodge.webp" class="card-img-top velikost" alt="...">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<a href="" class="card-title"><b> Dodge Charger</b></a>
+									<p><b>9 985 874 Kč</b></p>
+								</div>
+								<div class="d-flex justify-content-between">
+									<p class="card-text">
+										1969
+									</p>
+									<p>1 484 km</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	</div>
 </body>
 
