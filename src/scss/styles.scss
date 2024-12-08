@@ -61,7 +61,11 @@
     padding: 6px 0.2% 9px 4.3%;
 }
 }
-
+@media (min-width: 992px) {
+    .form-select{
+        width: 15rem;
+    }
+}
 .filter-item option {
     color: white !important;
     background: #201f1f !important;
