@@ -9,6 +9,8 @@ Fancybox.bind("[data-fancybox]", {
     // Your custom options
   });
 
+  
+
 // Import all of Bootstrap's JS
 import {Dropdown} from 'bootstrap';
 
