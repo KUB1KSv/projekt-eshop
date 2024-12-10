@@ -84,6 +84,69 @@
     object-fit: cover;
     filter: brightness(25%)
 }
+@media (max-width: 768px){
+    .detail3{
+        height: 300px;
+        width: 950px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .detail4 {
+        height: 100px;
+        width: 120px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .detail2 {
+        cursor: pointer;
+        height: 100px;
+        width: 120px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        filter: brightness(25%)
+
+    }
+    .detail {
+        height: 300px;
+        width: 535px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}
+@media (max-width: 576px){
+    .detail3{
+        height: 200px;
+        width: 750px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .detail4 {
+        height: 100px;
+        width: 100px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .detail2 {
+        cursor: pointer;
+        height: 100px;
+        width: 100px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        filter: brightness(25%)
+    }
+    .detail {
+        height: 200px;
+        width: 435px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}
+
+
 .fix {
     width: 150px;
     height: 150px;
@@ -123,12 +186,23 @@
     border-bottom: 1px solid #ffffff9e;
     width: 19.7%;
     padding: 6px 0.2% 9px 4.3%;
+
+
 }
 }
 
 @media (min-width: 992px) {
     .form-select{
         width: 15rem;
+    }
+
+    .detail2 {
+        cursor: pointer;
+        height: 110px;
+        width: 162px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        filter: brightness(25%)
     }
 }
 .filter-item option {
