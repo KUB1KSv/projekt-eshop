@@ -34,6 +34,8 @@ $headings-font-weight:  700;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+
+
 .image-container {
     position: relative;
     display: inline-block;
@@ -172,12 +174,8 @@ $headings-font-weight:  700;
     display: inline-block;
     font-size: 12px;
     text-decoration: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     text-indent: 1px;
     text-overflow: "";
-    -webkit-appearance: none;
-    -moz-appearance: none;
     background: transparent;
     background-image: url(/wp-content/themes/autasuper/static/img/svg/arrow-down-triangle.svg);
     background-repeat: no-repeat;
@@ -406,3 +404,20 @@ button:hover {
     margin-top: 10px;
 }
 
+.progress-bar-step {
+    width: 25%;
+}
+.step-label {
+    font-weight: bold;
+}
+.discount-input {
+    max-width: 300px;
+}
+
+
+.progress-bar-step {
+    width: 25%;
+}
+.step-label {
+    font-weight: bold;
+}
