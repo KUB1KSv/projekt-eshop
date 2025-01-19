@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
-$headings-font-weight:  700;
+$headings-font-weight: 700;
 // Import all of Bootstrap's CSS
 @import "bootstrap";
-*{
+
+* {
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
 }
+
 // Source mixin
 @mixin make-container($padding-x: $container-padding-x) {
     width: 90%;
@@ -14,13 +16,14 @@ $headings-font-weight:  700;
     padding-left: $padding-x;
     margin-right: auto;
     margin-left: auto;
-  }
-  
-  // Usage
-  .custom-container {
+}
+
+// Usage
+.custom-container {
     @include make-container();
-  }
-.card-title{
+}
+
+.card-title {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -51,12 +54,14 @@ $headings-font-weight:  700;
     font-size: 20px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
-.kulaty{
+
+.kulaty {
     border-radius: 50%;
     height: 60px;
     width: 60px;
 }
-.hvezdy{
+
+.hvezdy {
     color: gold;
 }
 
@@ -66,12 +71,14 @@ $headings-font-weight:  700;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
-.detail3{
+
+.detail3 {
     height: 400px;
     width: 950px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+
 .detail4 {
     height: 110px;
     width: 161px;
@@ -87,8 +94,9 @@ $headings-font-weight:  700;
     object-fit: cover;
     filter: brightness(25%)
 }
-@media (max-width: 768px){
-    .detail3{
+
+@media (max-width: 768px) {
+    .detail3 {
         height: 300px;
         width: 950px;
         aspect-ratio: 1 / 1;
@@ -109,8 +117,8 @@ $headings-font-weight:  700;
         aspect-ratio: 1 / 1;
         object-fit: cover;
         filter: brightness(25%)
-
     }
+
     .detail {
         height: 300px;
         width: 535px;
@@ -118,8 +126,9 @@ $headings-font-weight:  700;
         object-fit: cover;
     }
 }
-@media (max-width: 576px){
-    .detail3{
+
+@media (max-width: 576px) {
+    .detail3 {
         height: 200px;
         width: 750px;
         aspect-ratio: 1 / 1;
@@ -141,12 +150,14 @@ $headings-font-weight:  700;
         object-fit: cover;
         filter: brightness(25%)
     }
+
     .detail {
         height: 200px;
         width: 435px;
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
+
     .velikost {
         height: 250px;
         aspect-ratio: 1 / 1;
@@ -186,18 +197,18 @@ $headings-font-weight:  700;
 }
 
 @media (max-width: 1023px) {
-.filter-item {
-    margin-right: 0.5%;
-    border-bottom: 1px solid #ffffff9e;
-    width: 19.7%;
-    padding: 6px 0.2% 9px 4.3%;
+    .filter-item {
+        margin-right: 0.5%;
+        border-bottom: 1px solid #ffffff9e;
+        width: 19.7%;
+        padding: 6px 0.2% 9px 4.3%;
 
 
-}
+    }
 }
 
 @media (min-width: 992px) {
-    .form-select{
+    .form-select {
         width: 15rem;
     }
 
@@ -210,6 +221,7 @@ $headings-font-weight:  700;
         filter: brightness(25%)
     }
 }
+
 .filter-item option {
     color: white !important;
     background: #201f1f !important;
@@ -344,6 +356,7 @@ $headings-font-weight:  700;
 .product button:hover {
     background-color: #ffffff;
 }
+
 h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -355,7 +368,8 @@ h2 {
     gap: 30px;
 }
 
-.filter-section, .sort-section {
+.filter-section,
+.sort-section {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
@@ -400,20 +414,76 @@ button:hover {
     background-color: #0056b3;
 }
 
-.sort-button, .filter-button {
+.sort-button,
+.filter-button {
     margin-top: 10px;
 }
 
 .progress-bar-step {
     width: 25%;
 }
+
 .step-label {
     font-weight: bold;
 }
+
 .discount-input {
     max-width: 300px;
 }
 
 .form-check-label {
     font-size: 1.2rem;
+}
+
+input[type="radio"]:checked+label::before {
+    background-color: red;
+    border-color: red;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+input[type="radio"]:checked+label::before {
+    background-color: red;
+}
+
+input[type="radio"]+label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid gray;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked+label::before {
+    background-color: red;
+    border-color: red;
 }

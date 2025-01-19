@@ -50,7 +50,7 @@
                         <th>Produkt</th>
                         <th>Počet ks</th>
                         <th>Jednotková cena</th>
-                        <th>Celkem</th>
+                        <th>Celkem + DPH</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,7 +63,7 @@
                             <input type="number" class="form-control w-50" value="2">
                         </td>
                         <td>60 000 Kč</td>
-                        <td>120 000 Kč</td>
+                        <td>145 200 Kč</td>
                     </tr>
                     <tr>
                         <td>
@@ -74,7 +74,7 @@
                             <input type="number" class="form-control w-50" value="1">
                         </td>
                         <td>7 567 200 Kč</td>
-                        <td>7 567 200 Kč</td>
+                        <td>9 156 312 Kč</td>
                     </tr>
                     <tr>
                         <td>
@@ -85,7 +85,7 @@
                             <input type="number" class="form-control w-50" value="3">
                         </td>
                         <td>7 699 900 Kč</td>
-                        <td>23 099 700 Kč</td>
+                        <td>27 950 637 Kč</td>
                     </tr>
                 </tbody>
             </table>
@@ -95,16 +95,20 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-6">
-                <input type="text" class="form-control discount-input" placeholder="Zadejte slevový kód">
-                <button class="btn btn-danger mt-2">Použít</button>
+                <div class="mb-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Zadejte slevový kód">
+                        <button class="btn btn-danger mt-1">Použít</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 text-end">
-                <h4>Celková cena: <span class="text-danger">30 786 900 Kč</span></h4>
+            <div class="col-md-6 text-center text-md-end mb-3 mb-md-0">
+                <h4>Celková cena: <span class="text-danger">37 252 149 Kč</span></h4>
             </div>
         </div>
     </div>
 
-    <div class="container mt-4 mb-5 text-end">
+    <div class="container mt-4 mb-5 text-center text-md-end">
         <a href="doprava.html" class="btn btn-danger btn-lg">Pokračovat k dopravě a platbě</a>
     </div>
 
