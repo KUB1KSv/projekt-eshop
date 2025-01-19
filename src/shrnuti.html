@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shrnutí objednávky</title>
     <link rel="icon" href="images/logo.png" type="image/png">
+    <script type="module" src="./js/main.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
     </div>
     <div class="container mt-4">
         <div class="progress" style="height: 30px;">
-            <div class="progress-bar bg-success progress-bar-step" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-danger progress-bar-step" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 Shrnutí objednávky
             </div>
         </div>
@@ -37,23 +38,27 @@
                 <thead>
                     <tr>
                         <th>Název</th>
+                        <th>Počet kusů</th>
                         <th>Jednotková cena</th>
                         <th>Cena s DPH</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Produkt 1</td>
-                        <td>500 Kč</td>
-                        <td>605 Kč</td>
+                        <td>Škoda Octavia 1</td>
+                        <td>2 ks</td>
+                        <td>120 000 Kč</td>
+                        <td>145 200 kč</td>
                     </tr>
                     <tr>
-                        <td>Produkt 2</td>
-                        <td>300 Kč</td>
-                        <td>363 Kč</td>
+                        <td>Ford Mustang GTD</td>
+                        <td>1 ks</td>
+                        <td>7 567 200 Kč</td>
+                        <td>9 156 312 Kč</td>
                     </tr>
                     <tr>
                         <td>Produkt 3</td>
+                        <td>4 ks</td>
                         <td>200 Kč</td>
                         <td>242 Kč</td>
                     </tr>
@@ -63,15 +68,15 @@
 
         <div class="mb-4">
             <h4>Doprava a platba</h4>
-            <p><strong>Doprava:</strong> Kurýr (100 Kč)</p>
-            <p><strong>Platba:</strong> Dobírka (30 Kč)</p>
+            <p><strong>Doprava:</strong> Kurýr (10 000 Kč)</p>
+            <p><strong>Platba:</strong> Dobírka (3 000 000 Kč)</p>
         </div>
 
-        <div class="mb-4">
+        <div class="mb-4 w-25">
             <h4>Slevový kód</h4>
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Zadejte slevový kód">
-                <button class="btn btn-outline-secondary">Použít</button>
+                <button class="btn btn-danger mt-1">Použít</button>
             </div>
         </div>
 
@@ -95,25 +100,12 @@
 
         <div class="row">
             <div class="col-md-6">
-                <h4>Celková cena: <span class="text-success">1340 Kč</span></h4>
+                <h4>Celková cena: <span class="text-danger">1340 Kč</span></h4>
             </div>
             <div class="col-md-6 text-end">
-                <button class="btn btn-success btn-lg" onclick="potvrditObjednavku()">Potvrdit objednávku</button>
+                <a href="" class="btn btn-danger btn-lg mb-5">Potvrdit objednávku</a>
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function potvrditObjednavku() {
-            if (document.getElementById('souhlas').checked) {
-                alert('Objednávka byla potvrzena!');
-                // Přesměrování na potvrzovací stránku
-                window.location.href = 'potvrzeni.html';
-            } else {
-                alert('Pro potvrzení objednávky musíte souhlasit s obchodními podmínkami.');
-            }
-        }
-    </script>
 </body>
 </html>
